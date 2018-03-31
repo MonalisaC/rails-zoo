@@ -1,2 +1,20 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
+<nav>
+  <ul>
+    <li>
+      <%= link_to "Edit", edit_animal_path %>
+    </li>
+    <li>
+      <%= link_to "Delete", animal_path(@animal.id), method: :delete%>
+    </li>
+  </ul>
+</nav>
+
+
+<h2><%= @animal.name%></h2>
+<% if !@animal.image.nil? %>
+<%= image_tag @animal.image, alt: @animal.name %>
+<% end %>
+<p>
+  species: <%= @animal.species %> <br />
+  age: <%= @animal.age %>
+</p>

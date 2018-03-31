@@ -1,0 +1,13 @@
+<h2><%= page_title %></h2>
+
+<%= form_for @animal do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :species %>
+<%= f.text_field :species %>
+<%= f.label :age %>
+<%= f.text_field :age %>
+<%= f.label :image %>
+<%= f.text_field :image %>
+<%= f.submit %>
+<% end %>
